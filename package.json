@@ -1,7 +1,7 @@
 {
-  "name": "forkify",
+  "name": "guess-the-number",
   "version": "1.0.0",
-  "description": "Recipe searching application",
+  "description": "Number Guessing Game",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",
@@ -26,5 +26,10 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.0",
     "axios": "^0.18.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   }
 }
