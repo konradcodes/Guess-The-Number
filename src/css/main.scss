@@ -9,10 +9,9 @@
 @import "./base/base", "./base/fonts", "./base/typography", "./base/reset", "./base/animations";
 
 // 4. Layout-related sections
-@import "./layout/header", "./layout/footer";
+@import "./layout/container", "./layout/footer";
 
 // 5. Components
-@import "./components/button";
-
+@import "./components/button", "./components/game";
 // 6. Page-specific styles
 @import "./pages/home";

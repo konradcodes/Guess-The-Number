@@ -5,11 +5,22 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Document</title>
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+   <title>Guess The NUmber</title>
 </head>
 
 <body>
-
+   <div class="container">
+      <h1 class="heading-primary">Guess The Number!</h1>
+      <div class="game">
+         <p class="paragraph-numbers">Guess a number between <span class='min-num'>1</span> and <span
+               class='max-num'>10</span>
+         </p>
+         <input type="text" class="game__user-input" placeholder="Enter your guess...">
+         <button type="submit" class="btn">Check!</button>
+         <p class="game__message"></p>
+      </div>
+   </div>
 </body>
 
 </html>

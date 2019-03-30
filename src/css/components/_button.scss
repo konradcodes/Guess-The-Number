@@ -1,3 +1,21 @@
 // -----------------------------------------------------------------------------
 //* This file contains all styles related to the button components.
 // -----------------------------------------------------------------------------
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+  }
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
