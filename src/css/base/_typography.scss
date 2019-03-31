@@ -18,12 +18,28 @@ body {
   font-weight: 300;
   letter-spacing: 0.2rem;
 }
-.game__user-input {
-  background: #e87ea1;
-  padding: 2rem 4rem;
-  margin: 3rem 0;
-  outline: none;
-  border: none;
-  color: white;
-  display: block;
+.game {
+  &__user-input {
+    color: white;
+    font-size: 1.2rem;
+    background: #e87ea1;
+    padding: 2rem 4rem;
+    display: block;
+    margin: 3rem 0;
+    outline: none;
+    border: none;
+    &::placeholder {
+      color: $color-white;
+    }
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &__message {
+    color: $color-white;
+    font-size: 2rem;
+  }
 }
