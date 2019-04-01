@@ -1,4 +1,10 @@
 .game {
+  @media only screen and (max-width: $bp-medium) {
+    margin: 0 10rem;
+  }
+  @media only screen and (max-width: $bp-mobile) {
+    margin: 0 5rem;
+  }
   &__message {
     position: absolute;
     top: 70%;

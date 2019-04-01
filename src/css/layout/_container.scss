@@ -10,4 +10,11 @@
   align-items: center;
   flex-direction: column;
   clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 90%);
+
+  @media only screen and (max-width: $bp-medium) {
+    clip-path: polygon(0 9%, 100% 0, 100% 100%, 0 96%);
+  }
+  @media only screen and (max-width: $bp-mobile) {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 98%);
+  }
 }

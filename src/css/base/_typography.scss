@@ -12,6 +12,13 @@ body {
   font-weight: 700;
   letter-spacing: 0.3rem;
   animation: moveFromTop 1s ease-out;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 4rem;
+  }
+  @media only screen and (max-width: $bp-mobile) {
+    font-size: 3rem;
+  }
 }
 .paragraph-numbers {
   color: #dfe0e2;
@@ -19,18 +26,33 @@ body {
   font-weight: 300;
   letter-spacing: 0.2rem;
   animation: moveFromLeft 1s ease-out;
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 2rem;
+  }
+  @media only screen and (max-width: $bp-mobile) {
+    font-size: 1.5rem;
+  }
 }
 .game {
   &__user-input {
     color: white;
     font-size: 1.2rem;
     background: #e87ea1;
+    border-radius: 4px;
     padding: 2rem 4rem;
     display: block;
     margin: 3rem 0;
     outline: none;
     border: none;
     animation: moveFromRight 1s ease-out;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0.5rem 1rem 1rem rgba($color-black, 0.15);
+      transform: translateY(-0.4rem);
+    }
+
     &::placeholder {
       color: $color-white;
     }
