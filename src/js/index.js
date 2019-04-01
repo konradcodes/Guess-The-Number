@@ -38,10 +38,13 @@ const controlGuess = () => {
 };
 
 //Guess Event Listeners
-elements.btnSubmit.addEventListener("click", e => {
+elements.formContainer.addEventListener("submit", e => {
   e.preventDefault();
 
-  if (state.guess.guessesLeft === 0 && elements.btnSubmit.classList.contains("play-again")) {
+  if (
+    (state.guess.guessesLeft === 0 && elements.btnSubmit.classList.contains("play-again")) ||
+    (state.guess.guessesLeft > 0 && elements.btnSubmit.classList.contains("play-again"))
+  ) {
     guessView.cleanView();
     state.guess.cleanGuess();
     return;

@@ -17,6 +17,7 @@ export const renderMessage = (option, guessesLeft) => {
     elements.btnSubmit.classList.add("play-again");
   } else if (option === "nextTry") {
     elements.message.textContent = `Wrong answer. Guesses left ${guessesLeft}`;
+    elements.userGuess.value = "";
   } else if (option === "lost") {
     elements.message.textContent = "You lost";
     elements.userGuess.disabled = true;
@@ -29,4 +30,6 @@ export const cleanView = () => {
   elements.message.textContent = "";
   elements.userGuess.disabled = false;
   elements.userGuess.value = "";
+  elements.btnSubmit.textContent = "Check!";
+  elements.btnSubmit.classList.remove("play-again");
 };

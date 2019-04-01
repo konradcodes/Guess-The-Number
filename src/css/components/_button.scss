@@ -19,6 +19,7 @@
     background-size: 220%;
     background-position: 100%;
     color: $color-white;
+    animation: moveFromBottom 1s ease-out;
   }
 
   &:hover,

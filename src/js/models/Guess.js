@@ -29,8 +29,9 @@ export default class Guess {
     if (this.guessesLeft === 0) {
       return "lost";
     }
-    return "nextTry"; // czy cos innego
+    return "nextTry";
   }
+
   cleanGuess() {
     this.guess = null;
     this.guessesLeft = 3;
