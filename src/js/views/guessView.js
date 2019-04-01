@@ -16,10 +16,10 @@ export const renderMessage = (option, guessesLeft) => {
     elements.btnSubmit.textContent = "Play Again";
     elements.btnSubmit.classList.add("play-again");
   } else if (option === "nextTry") {
-    elements.message.textContent = `Wrong answer. Guesses left ${guessesLeft}`;
+    elements.message.textContent = `Wrong answer. Try Again Guesses left ${guessesLeft}`;
     elements.userGuess.value = "";
   } else if (option === "lost") {
-    elements.message.textContent = "You lost";
+    elements.message.textContent = "Game Over! You lost :C";
     elements.userGuess.disabled = true;
     elements.btnSubmit.textContent = "Play Again";
     elements.btnSubmit.classList.add("play-again");
