@@ -45,7 +45,7 @@ elements.btnSubmit.addEventListener("click", e => {
   state.guess.addGuess(guess);
   //Check
   state.guess.checkGuess();
-  guessView.renderMessage("Kurwa leb mnie boli", true);
+  guessView.renderMessage("", true);
   console.log(state);
 });
 
