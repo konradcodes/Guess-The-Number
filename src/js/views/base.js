@@ -4,5 +4,6 @@ export const elements = {
   maxNum: document.querySelector(".max-num"),
   userGuess: document.querySelector(".game__user-input"),
   btnSubmit: document.querySelector(".btn"),
-  message: document.querySelector(".game__message")
+  message: document.querySelector(".game__message"),
+  container: document.querySelector(".container")
 };

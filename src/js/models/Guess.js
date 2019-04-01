@@ -14,21 +14,26 @@ export default class Guess {
   static generateWinningNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
+
   checkGuess() {
     if (this.guess === this.winningNum) {
       //Game over - WON
-      return true;
+      return "won";
     } else {
-      //Game Over - Lost
       return this.checkGuessesLeft();
     }
   }
+
   checkGuessesLeft() {
-    //Wrong Answer
     this.guessesLeft -= 1;
     if (this.guessesLeft === 0) {
-      //Game Over - Lost
-      return false;
+      return "lost";
     }
+    return "nextTry"; // czy cos innego
+  }
+  cleanGuess() {
+    this.guess = null;
+    this.guessesLeft = 3;
+    this.winningNum = Guess.generateWinningNum(this.min, this.max);
   }
 }

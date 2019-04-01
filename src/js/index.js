@@ -26,6 +26,7 @@ import "../css/main.scss";
  *
  */
 const state = {};
+window.state = state;
 
 // --- CONTROLLERS ---
 
@@ -39,14 +40,18 @@ const controlGuess = () => {
 //Guess Event Listeners
 elements.btnSubmit.addEventListener("click", e => {
   e.preventDefault();
+
+  if (state.guess.guessesLeft === 0 && elements.btnSubmit.classList.contains("play-again")) {
+    guessView.cleanView();
+    state.guess.cleanGuess();
+    return;
+  }
   //Get guess from the user
   const guess = guessView.getInput();
-  //Add it
+  //Add user guess to state
   state.guess.addGuess(guess);
-  //Check
-  state.guess.checkGuess();
-  guessView.renderMessage("", true);
-  console.log(state);
+  //Check if it matches the winning number
+  guessView.renderMessage(state.guess.checkGuess(), state.guess.guessesLeft);
 });
 
 controlGuess();

@@ -31,3 +31,18 @@
     outline: none;
   }
 }
+
+.btn-play {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 5rem;
+    display: inline-block;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+}
