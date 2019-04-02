@@ -9,7 +9,7 @@ export const renderValues = (min, max) => {
   elements.maxNum.textContent = max;
 };
 
-export const renderMessage = (option, guessesLeft) => {
+export const renderMessage = (option, guessesLeft, winningNumber) => {
   if (option === "won") {
     elements.message.textContent = "Well done you won!";
     elements.userGuess.disabled = true;
@@ -19,7 +19,7 @@ export const renderMessage = (option, guessesLeft) => {
     elements.message.textContent = `Wrong answer. Try Again Guesses left ${guessesLeft}`;
     elements.userGuess.value = "";
   } else if (option === "lost") {
-    elements.message.textContent = "Game Over! You lost :C";
+    elements.message.textContent = `Game Over! You lost, Winning Number was: ${winningNumber}`;
     elements.userGuess.disabled = true;
     elements.btnSubmit.textContent = "Play Again";
     elements.btnSubmit.classList.add("play-again");

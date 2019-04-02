@@ -54,7 +54,7 @@ elements.formContainer.addEventListener("submit", e => {
   //Add user guess to state
   state.guess.addGuess(guess);
   //Check if it matches the winning number
-  guessView.renderMessage(state.guess.checkGuess(), state.guess.guessesLeft);
+  guessView.renderMessage(state.guess.checkGuess(), state.guess.guessesLeft, state.guess.winningNum);
 });
 
 controlGuess();
